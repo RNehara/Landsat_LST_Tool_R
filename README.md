@@ -30,8 +30,7 @@ Computes atmospheric water vapor using the empirical formula by Buck (1981):
 Buck, A.L. (1981). New equations for computing vapor pressure and enhancement factor. Journal of Applied Meteorology and Climatology, 20(12), 1527–1532.    
 **LST Estimation**  
 Applies the Practical Single-Channel Algorithm from Wang et al. (2019):  
-Wang, F., Qin, Z., Song, C., Tu, L., Karnieli, A., & Zhao, S. (2019). An improved single-channel algorithm for land surface temperature retrieval from Landsat 8 thermal infrared sensor data. Remote Sensing, 11(5), 522.
-Export  
+Wang, F., Qin, Z., Song, C., Tu, L., Karnieli, A., & Zhao, S. (2019). An improved single-channel algorithm for land surface temperature retrieval from Landsat 8 thermal infrared sensor data. Remote Sensing, 11(5), 522.  
 Saves daytime and nighttime LST outputs as GeoTIFF files (LST_day.tif and LST_night.tif)    
 
 **Required R Packages**  
