@@ -14,7 +14,7 @@ It supports both daytime and nighttime image processing and is tailored for envi
 **Input Requirements**  
 Landsat 8/9 Collection 2 Level-1 imagery  
 Bands: 2–7 (OLI), 10–11 (TIRS)  
-Metadata: .MTL.txt or .xml file  
+Metadata: ANG and MTL.txt and .xml file  
 Meteorological data must include: air temperature (°C), relative humidity (%), and atmospheric pressure (mbar)  
 Should be from the same day, location, and the hour immediately after the satellite acquisition time (e.g., if the image was acquired at 13:15 PM, use meteorological data from 14:00 PM).    
 
