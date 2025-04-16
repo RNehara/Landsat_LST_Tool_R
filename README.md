@@ -68,7 +68,8 @@ LST_night.tif: Raster of nighttime land surface temperature (in °C)
 **References**  
 Wang, F. et al. (2019). An improved single-channel algorithm for land surface temperature retrieval from Landsat 8 thermal infrared sensor data. Remote Sensing, 11(5), 522. https://doi.org/10.3390/rs11050522  
 Li, Z., & Jiang, J. (2018). A new method for estimating broadband emissivity of land surfaces. Int. J. Remote Sensing, 39(13), 4341–4360. https://doi.org/10.1080/01431161.2017.1420936  
-Buck, A.L. (1981). New equations for computing vapor pressure and enhancement factor. J. Appl. Meteorol., 20(12), 1527–1532.    
+Buck, A.L. (1981). New equations for computing vapor pressure and enhancement factor. J. Appl. Meteorol., 20(12), 1527–1532.  
+Rech, B., Moreira, R. N., Mello, T. A. G., Klouček, T., & Komárek, J. (2024). Assessment of daytime and nighttime surface urban heat islands across local climate zones–A case study in Florianópolis, Brazil. Urban Climate, 55, 101954.    
 
 **Author**  
 Rodrigo Nehara  
