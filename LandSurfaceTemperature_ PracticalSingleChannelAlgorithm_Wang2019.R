@@ -31,7 +31,7 @@ library(dplyr)       # data manipulation
     # Keep only the necessary bands and all .txt and .XML files in the directories.
     # Do not rename the bands and metadata file in the folder.
     # It is recommended that the satellites imagery come from dates as close as possible to minimize atmospheric inconsistencies.
-    # Meteorological data must include: date, time, air temperature (°C), relative humidity (%), and atmospheric pressure (mbar)
+    # Meteorological data must include: air temperature (°C), relative humidity (%), and atmospheric pressure (mbar)
     # Should be from the same day, location, and the hour immediately after the satellite acquisition time (e.g., if the image was acquired at 13:15 PM, use meteorological data from 14:00 PM).
 
 
