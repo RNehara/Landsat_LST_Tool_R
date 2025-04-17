@@ -27,11 +27,11 @@ library(dplyr)       # data manipulation
 # ------------------------------------------------------------
 
     # This script calculates land surface temperature according to the Practical Single-Channel Algorithm proposed by Wang et al. (2019).
-    # This script requires Landsat 8/9 Collection 2 Level-1 bands 2, 3, 4, 5, 6, 7, 10 and 11.
+    # This script requires Landsat 8/9 Collection 2 Level-1 bands 2, 3, 4, 5, 6, 7, 10 and 11 (daytime and nighttime).
     # Keep only the necessary bands and all .txt and .XML files in the directories.
     # Do not rename the bands and metadata file in the folder.
     # It is recommended that the satellites imagery come from dates as close as possible to minimize atmospheric inconsistencies.
-    # Meteorological data must include: air temperature (°C), relative humidity (%), and atmospheric pressure (mbar)
+    # Meteorological data from weather station must include: air temperature (°C), relative humidity (%), and atmospheric pressure (mbar)
     # Should be from the same day, location, and the hour immediately after the satellite acquisition time (e.g., if the image was acquired at 13:15 PM, use meteorological data from 14:00 PM).
 
 
