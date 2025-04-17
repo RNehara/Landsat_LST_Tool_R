@@ -334,3 +334,22 @@ cat('Exporting LST rasters (ºC)\n')
 writeRaster(LST_day, filename = file.path(output, "LST_day.tif"), overwrite = TRUE)
 writeRaster(LST_night, filename = file.path(output, "LST_night.tif"), overwrite = TRUE)
 cat('It is done\n')
+
+
+
+# References
+# Wang, M., Zhang, Z., Hu, T., & Liu, X. (2019). 
+# A practical single‐channel algorithm for land surface temperature retrieval: application to landsat series data.
+# Journal of Geophysical Research: Atmospheres, 124(1), 299-316. 10.1029/2018JD029330
+                             
+# Li, S., & Jiang, G. M. (2018).
+# Land surface temperature retrieval from Landsat-8 data with the generalized split-window algorithm.
+# IEEE Access, 6, 18149-18162. 10.1109/ACCESS.2018.2818741
+                             
+# Buck, A. L. (1981).
+# New equations for computing vapor pressure and enhancement factor.
+# Journal of Applied Meteorology and Climatology, 20(12), 1527-1532. 10.1175/1520-0450(1981)020<1527:NEFCVP>2.0.CO;2
+
+# Rech, B., Moreira, R. N., Mello, T. A. G., Klouček, T., & Komárek, J. (2024).
+# Assessment of daytime and nighttime surface urban heat islands across local climate zones–A case study in Florianópolis, Brazil.
+# Urban Climate, 55, 101954. https://doi.org/10.1016/j.uclim.2024.101954
