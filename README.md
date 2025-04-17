@@ -4,7 +4,7 @@ It supports both daytime and nighttime image processing and is tailored for envi
 
 **Features**  
 🔹 Calculates LST from Landsat 8/9 Band 10 (Thermal Infrared Sensor - TIRS)   
-🔹 Radiometric and reflectance correction using metadata (MTL & XML)  
+🔹 Radiometric and reflectance correction using metadata (txt & XML)  
 🔹 Emissivity estimation using NDVI and reflectance bands based on Li & Jiang (2018)  
 🔹 Atmospheric water vapor estimation using meteorological data  
 🔹 Full support for daytime and nighttime acquisitions  
