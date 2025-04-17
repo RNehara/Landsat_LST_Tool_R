@@ -12,10 +12,10 @@ It supports both daytime and nighttime image processing and is tailored for envi
 🔹 Recommended: use satellite and meteorological data from dates as close as possible to reduce atmospheric variation    
 
 **Input Requirements**  
-Landsat 8/9 Collection 2 Level-1 imagery  
+Landsat 8/9 Collection 2 Level-1 imagery (day time and nighttime imagery)  
 Bands: 2–7 (OLI), 10–11 (TIRS)  
 Metadata: ANG and MTL.txt and .xml file  
-Meteorological data must include: air temperature (°C), relative humidity (%), and atmospheric pressure (mbar)  
+Meteorological data from weather station must include: air temperature (°C), relative humidity (%), and atmospheric pressure (mbar)  
 Should be from the same day, location, and the hour immediately after the satellite acquisition time (e.g., if the image was acquired at 13:15 PM, use meteorological data from 14:00 PM).    
 
 **How it Works**  
