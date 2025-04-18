@@ -1,4 +1,4 @@
-**Land Surface Temperature (LST) Estimation from Landsat 8/9 – R Implementation**  
+# Land Surface Temperature (LST) Estimation from Landsat 8/9 – R Implementation  
 This repository contains an R-based tool for estimating Land Surface Temperature (LST) from Landsat 8/9 Collection 2 Level-1 imagery, using the Practical Single-Channel Algorithm proposed by Wang et al. (2019).  
 It supports both daytime and nighttime image processing and is tailored for environmental and urban climate applications worldwide.    
 
