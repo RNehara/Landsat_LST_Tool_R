@@ -28,7 +28,7 @@ library(dplyr)       # data manipulation
 
     # This script calculates land surface temperature according to the Practical Single-Channel Algorithm proposed by Wang et al. (2019).
     # This script requires Landsat 8/9 Collection 2 Level-1 bands 2, 3, 4, 5, 6, 7, 10 and 11 (daytime and nighttime).
-    # Keep only the necessary bands and all .txt and .XML files in the directories.
+    # Keep only all the bands, .txt and .XML files in the directories.
     # Do not rename the bands and metadata file in the folder.
     # It is recommended that the satellites imagery come from dates as close as possible to minimize atmospheric inconsistencies.
     # Meteorological data from weather station must include: air temperature (°C), relative humidity (%), and atmospheric pressure (mbar)
@@ -36,16 +36,16 @@ library(dplyr)       # data manipulation
 
 
     # dir: the directory (folder paths) where the images are stored.
-    # scene_id: the id of image (ex.: LC08_L1TP_219076_20190614_20200828_02_T1).
     # output: the directory (folder paths) where the images should be exported.
 
 # Define paths for daytime
-dir_day <- "C:/Users/nehar/OneDrive/Documentos/Artigo_Clima_Urbano/Landsat_Image/daytime/"
-scene_id_day <- "LC09_L1TP_219076_20240619_20240620_02_T1"
+dir_day <- "path/to/daytime/scene/"
 
 # Define paths for nighttime
-dir_night <- "C:/Users/nehar/OneDrive/Documentos/Artigo_Clima_Urbano/Landsat_Image/Nightime/"
-scene_id_night <- "LC09_L1GT_101168_20230607_20230607_02_T2"
+dir_night <- "path/to/nighttime/scene/"
+
+# # Define paths for output
+output <-  "path/to/output/folder/"
 
 # Meteorological variables for daytime manually defined by the user
 t_air_day <- 24.7 # t_air: Air temperature (°C)
@@ -57,15 +57,14 @@ t_air_night <- 13.9 # t_air: Air temperature (°C)
 rel_hum_night <- 0.946 # rel_hum: Relative humidity (decimal, e.g., 0.62 for 62%)
 p_atm_night <- 937.3 # p_atm: Atmospheric pressure (mbar or hPa)
 
-output <- "C:/Users/nehar/OneDrive/Documentos/Artigo_Clima_Urbano/Landsat_Image/tesste/"
-
 # -------------- edition ends here ---------------------------
 
 cat('Calculating land surface temperature for daytime\n')
 
 cat('Processing daytime images\n')
-# Process day images
-img_list_day <- list.files(path = dir_day, pattern = '.*TIF$', full.names = TRUE)
+
+bands_day <- c("B2", "B3", "B4", "B5", "B6", "B7", "B10", "B11") # Band order
+img_list_day <- sapply(bands_day, function(b) list.files(dir_day, pattern = paste0(b, ".*TIF$"), full.names = TRUE)) # Get only matching files in correct order
 image_day <- rast(img_list_day)
 names(image_day) <- lapply(names(image_day), function(name) str_sub(name, 42))
 metadata_name_day <- list.files(path = dir_day, pattern = '.*xml$', full.names = TRUE)
@@ -233,8 +232,8 @@ cat('It is done\n')
 
 cat('Processing nighttime images\n')
 
-# Process night images
-img_list_night <- list.files(path = dir_night, pattern = '.*TIF$', full.names = TRUE)
+bands_night <- c("B10", "B11") # Band order
+img_list_day <- sapply(bands_night, function(b) list.files(dir_day, pattern = paste0(b, ".*TIF$"), full.names = TRUE)) # Get only matching files in correct order
 image_night <- rast(img_list_night)
 names(image_night) <- lapply(names(image_night), function(name) str_sub(name, 42))
 metadata_name_night <- list.files(path = dir_night, pattern = '.*xml$', full.names = TRUE)
