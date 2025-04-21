@@ -233,7 +233,7 @@ cat('It is done\n')
 cat('Processing nighttime images\n')
 
 bands_night <- c("B10", "B11") # Band order
-img_list_day <- sapply(bands_night, function(b) list.files(dir_day, pattern = paste0(b, ".*TIF$"), full.names = TRUE)) # Get only matching files in correct order
+img_list_night <- sapply(bands_night, function(b) list.files(dir_night, pattern = paste0(b, ".*TIF$"), full.names = TRUE)) # Get only matching files in correct order
 image_night <- rast(img_list_night)
 names(image_night) <- lapply(names(image_night), function(name) str_sub(name, 42))
 metadata_name_night <- list.files(path = dir_night, pattern = '.*xml$', full.names = TRUE)
